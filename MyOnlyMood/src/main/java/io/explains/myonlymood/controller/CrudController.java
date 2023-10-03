@@ -1,6 +1,6 @@
 package io.explains.myonlymood.controller;
 
-import io.explains.myonlymood.service.ICrudService;
+import io.explains.myonlymood.service.CRUD.ICrudService;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
