@@ -13,7 +13,6 @@ public interface  ICrudService<T, ID extends Serializable> {
 
     List<T> findAll(Sort sort);
 
-
     Page<T> findAll(Pageable pageable);
 
     T save(T entity);

@@ -1,14 +1,10 @@
 package io.explains.myonlymood.model;
 
+import io.explains.myonlymood.annotation.UniqueUsername;
 import io.explains.myonlymood.model.NonEssential.Interest;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -19,24 +15,18 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
 
-
+    @NotNull
     private String ocupation;
 
-
+    @NotNull @UniqueUsername
     private String username;
 
-
-    private String email;
-
-
+    @NotNull @Getter @Setter
     private String password;
 
-    @Getter
-    private LocalDate age;
-
-    private Interest firstInterest;
+    @OneToOne
+    private Actives actives;
 
 }

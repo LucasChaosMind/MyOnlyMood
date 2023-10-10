@@ -1,16 +1,12 @@
-package io.explains.myonlymood.model;
+package io.explains.myonlymood.dto;
 
-import jakarta.persistence.*;
+import io.explains.myonlymood.model.BankTransaction;
+import jakarta.persistence.ManyToMany;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 
-@Entity
-public class AccountBank {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class AccountBankDTO {
 
     @NotNull
     private String name;

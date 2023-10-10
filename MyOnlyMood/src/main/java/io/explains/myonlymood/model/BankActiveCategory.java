@@ -1,6 +1,7 @@
 package io.explains.myonlymood.model;
 
 import io.explains.myonlymood.model.enums.BanksActiveType;
+import io.explains.myonlymood.model.enums.TransferStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,5 +24,8 @@ public class BankActiveCategory {
 
     @NotNull
     private BanksActiveType Type;
+
+    @NotNull
+    private TransferStatus statusType;
 
 }

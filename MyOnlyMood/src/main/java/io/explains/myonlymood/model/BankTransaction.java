@@ -17,10 +17,7 @@ public class BankTransaction {
     @ManyToOne
     private BankActiveCategory activeCategory;
 
-    @ManyToOne
-    private AccountBank AccountBank;
-
-
+    @NotNull
     private LocalDate transactionDate;
 
     @NotNull
