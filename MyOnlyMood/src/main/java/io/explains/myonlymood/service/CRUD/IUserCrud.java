@@ -1,6 +1,6 @@
 package io.explains.myonlymood.service.CRUD;
 
-import io.explains.myonlymood.model.User;
+import io.explains.myonlymood.model.UserAccount;
 
-public interface IUserCrud extends IRestrictCrudService<User, Long> {
+public interface IUserCrud extends IRestrictCrudService<UserAccount, Long> {
 }

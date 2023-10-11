@@ -1,6 +1,6 @@
 package io.explains.myonlymood.service;
 
-import io.explains.myonlymood.model.User;
+import io.explains.myonlymood.model.UserAccount;
 import io.explains.myonlymood.repository.UserRepository;
 import io.explains.myonlymood.service.CRUD.IUserCrud;
 import io.explains.myonlymood.service.CRUD.Impl.RestrictCrudServiceImpl;
@@ -9,7 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl extends RestrictCrudServiceImpl<User, Long> implements IUserCrud {
+public class UserServiceImpl extends RestrictCrudServiceImpl<UserAccount, Long> implements IUserCrud {
 
     private final UserRepository repository;
     private PasswordEncoder passwordEncoder;
@@ -20,15 +20,14 @@ public class UserServiceImpl extends RestrictCrudServiceImpl<User, Long> impleme
     }
 
     @Override
-    protected JpaRepository<User, Long> getRepository() {
+    protected JpaRepository<UserAccount, Long> getRepository() {
         return repository;
     }
 
-
-    public User save(User user){
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return repository.save(user);
-
+    @Override
+    public UserAccount save(UserAccount userAccount){
+        userAccount.setPassword(passwordEncoder.encode(userAccount.getPassword()));
+        return repository.save(userAccount);
     }
 
 
