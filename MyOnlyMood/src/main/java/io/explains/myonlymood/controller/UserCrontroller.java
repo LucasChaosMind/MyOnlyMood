@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("users")
+@RequestMapping("UserAccount")
 public class UserCrontroller extends RestrictCrudController<UserAccount, UserAccountDTO,Long> {
 
     private final IUserCrud service;

@@ -9,8 +9,11 @@ import io.explains.myonlymood.service.CRUD.IBankActiveCategoryCrud;
 import io.explains.myonlymood.service.CRUD.IBankTransactionCrud;
 import io.explains.myonlymood.service.CRUD.IRestrictCrudService;
 import org.modelmapper.ModelMapper;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-
+@RestController
+@RequestMapping("BankActive")
 public class BankActiveCategoryController extends RestrictCrudController<BankActiveCategory, BankActiveCategoryDTO,Long> {
 
     private final IBankActiveCategoryCrud service;

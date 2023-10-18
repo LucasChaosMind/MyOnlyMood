@@ -2,7 +2,13 @@ package io.explains.myonlymood.dto;
 
 import io.explains.myonlymood.annotation.UniqueUsername;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserAccountDTO {
 
     @NotNull
@@ -13,4 +19,7 @@ public class UserAccountDTO {
 
     @NotNull
     private String password;
+
+
+    private String displayName;
 }

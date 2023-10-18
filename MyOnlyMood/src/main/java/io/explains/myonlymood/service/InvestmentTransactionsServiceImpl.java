@@ -5,7 +5,9 @@ import io.explains.myonlymood.repository.InvestmentTransactionsRepository;
 import io.explains.myonlymood.service.CRUD.IInvestmentTransactionsCrud;
 import io.explains.myonlymood.service.CRUD.Impl.RestrictCrudServiceImpl;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class InvestmentTransactionsServiceImpl extends RestrictCrudServiceImpl<InvestmentTransactions, Long> implements IInvestmentTransactionsCrud {
 
     private final InvestmentTransactionsRepository repository;

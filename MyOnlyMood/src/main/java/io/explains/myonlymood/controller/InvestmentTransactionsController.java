@@ -11,7 +11,11 @@ import io.explains.myonlymood.service.CRUD.IInvestmentTransactionsCrud;
 import io.explains.myonlymood.service.CRUD.IRestrictCrudService;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("InvestmentTransactions")
 public class InvestmentTransactionsController extends RestrictCrudController<InvestmentTransactions, InvestmentTransactionsDTO,Long> {
 
     private final IInvestmentTransactionsCrud service;

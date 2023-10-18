@@ -13,7 +13,11 @@ import io.explains.myonlymood.service.CRUD.IActivesCrud;
 import io.explains.myonlymood.service.CRUD.IBankTransactionCrud;
 import io.explains.myonlymood.service.CRUD.IRestrictCrudService;
 import org.modelmapper.ModelMapper;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("BankTrasaction")
 public class BankTransactionController extends RestrictCrudController<BankTransaction, BankTransactionDTO,Long> {
 
     private final IBankTransactionCrud service;

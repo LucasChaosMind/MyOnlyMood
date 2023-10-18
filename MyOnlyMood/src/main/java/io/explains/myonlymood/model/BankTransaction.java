@@ -17,8 +17,11 @@ public class BankTransaction {
     @ManyToOne
     private BankActiveCategory activeCategory;
 
+    /* Precisa de uma Annotation para automatizar a data e hora
     @NotNull
     private LocalDate transactionDate;
+    */
+
 
     @NotNull
     private BigDecimal thePrice;
