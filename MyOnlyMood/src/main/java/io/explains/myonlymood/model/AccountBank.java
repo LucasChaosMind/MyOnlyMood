@@ -17,8 +17,6 @@ public class AccountBank {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    private String name;
 
     @NotNull
     private String bankName;
@@ -26,7 +24,10 @@ public class AccountBank {
     @NotNull
     private String accountNumber;
 
-    @ManyToMany
+    @OneToMany
     private List<BankTransaction> transactions;
+
+    @OneToOne
+    private UserAccount userAccount;
 
 }

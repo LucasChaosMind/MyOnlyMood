@@ -22,7 +22,6 @@ public class BankTransaction {
     private LocalDate transactionDate;
     */
 
-
     @NotNull
     private BigDecimal thePrice;
 

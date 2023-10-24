@@ -20,6 +20,7 @@ public class BankActiveCategory {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Getter
     private Long id;
 
+    //Annotation
     private Integer priority;
 
     @NotNull

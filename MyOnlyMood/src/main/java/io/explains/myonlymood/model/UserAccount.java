@@ -2,6 +2,7 @@ package io.explains.myonlymood.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.explains.myonlymood.annotation.UniqueUsername;
+import io.explains.myonlymood.model.NonEssential.Actives;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -29,11 +30,14 @@ public class UserAccount implements UserDetails {
     @NotNull @Getter @Setter
     private String password;
 
-    @OneToOne
-    private Actives actives;
-
     @Getter @Setter
     private String displayName;
+
+    /*
+    @OneToOne
+    private Actives actives;*/
+
+
 
     @Override
     @Transient
