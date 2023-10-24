@@ -4,22 +4,21 @@ import io.explains.myonlymood.annotation.UniqueUsername;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor
+@NoArgsConstructor @Data
 public class UserAccountDTO {
 
-    @NotNull
+    private Long id;
+
     private String ocupation;
 
-    @NotNull @UniqueUsername
     private String username;
 
-    @NotNull
     private String password;
-
 
     private String displayName;
 }

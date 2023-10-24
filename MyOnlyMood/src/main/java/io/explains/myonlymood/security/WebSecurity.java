@@ -2,6 +2,7 @@ package io.explains.myonlymood.security;
 
 
 import io.explains.myonlymood.service.CRUD.Impl.AuthService;
+
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,14 +14,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
 import java.util.List;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
@@ -66,7 +65,7 @@ public class WebSecurity {
         // configura a authorização das requisições
         http.authorizeHttpRequests((authorize) -> authorize
                 //permite que a rota "/users" seja acessada, mesmo sem o usuário estar autenticado desde que o método HTTP da requisição seja POST
-                .requestMatchers(antMatcher(HttpMethod.POST, "/users/**")).permitAll()
+                .requestMatchers(antMatcher(HttpMethod.POST, "/UserAccount/**")).permitAll()
                 //permite que a rota "/error" seja acessada por qualquer requisição mesmo o usuário não estando autenticado
                 .requestMatchers(antMatcher("/error/**")).permitAll()
                 //permite que a rota "/h2-console" seja acessada por qualquer requisição mesmo o usuário não estando autenticado

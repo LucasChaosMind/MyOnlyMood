@@ -3,21 +3,26 @@ package io.explains.myonlymood.dto;
 import io.explains.myonlymood.model.BankTransaction;
 import jakarta.persistence.ManyToMany;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
-
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class AccountBankDTO {
 
-    @NotNull
+    private Long id;
+
     private String name;
 
-    @NotNull
     private String bankName;
 
-    @NotNull
     private String accountNumber;
 
-    @ManyToMany
     private List<BankTransaction> transactions;
 
 }

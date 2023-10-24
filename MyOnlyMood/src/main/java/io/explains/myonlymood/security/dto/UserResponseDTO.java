@@ -1,11 +1,19 @@
 package io.explains.myonlymood.security.dto;
 
 import io.explains.myonlymood.model.UserAccount;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserResponseDTO {
 
     private String displayName;
